@@ -3,7 +3,7 @@
 # Args to maipulate as needed
 message="commit till 60"
 content="  "
-number_of_commits=0
+number_of_commits=20
 
 
 # Usual git stuff
