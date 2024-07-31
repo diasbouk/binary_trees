@@ -32,9 +32,14 @@ typedef struct binary_tree_s binary_tree_t;
 
 
 
+/* Prints a binary tree in a nice formatted way */
 void binary_tree_print(const binary_tree_t *parent);
+/* Dynamically creating a new node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+/* Inserting at left */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+/* Inserting at right */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
-
+/* Deleting an entire binary_tree */
+void binary_tree_delete(binary_tree_t *tree);
 #endif 
