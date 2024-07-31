@@ -44,4 +44,6 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 void binary_tree_delete(binary_tree_t *tree);
 /* Checks for a node if its a lead */
 int binary_tree_is_leaf(const binary_tree_t *node);
+/* Checks if a node is root */
+int binary_tree_is_root(const binary_tree_t *node);
 #endif 
