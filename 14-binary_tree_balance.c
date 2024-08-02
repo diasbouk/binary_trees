@@ -21,7 +21,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 		rightH = 1 + binary_tree_balance(tree->right);
 	else
 		rightH = binary_tree_balance(tree->right);
-	if (tree->parent)
+	if (!tree->parent)
 		return (leftH - rightH);
 	return (leftH > rightH ? leftH : rightH);
 }
