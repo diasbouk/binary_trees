@@ -12,16 +12,16 @@
 int	has_both(const binary_tree_t *ancestor, const binary_tree_t *first,
 			const binary_tree_t *second)
 {
-	int first_found;
-	int second_found;
+	int first_found = 0;
+	int second_found = 0;
 
 	if (!ancestor || !first || !second)
 		return (0);
 	if (ancestor == first || ancestor == second)
 		return (1);
-	first_found = has_both(ancestor->left, first, second);
-	second_found = has_both(ancestor->left, first, second);
-	return (first_found && second_found);
+	first_found += has_both(ancestor->left, first, second);
+	second_found += has_both(ancestor->left, first, second);
+	return (first_found + second_found);
 }
 
 /**
@@ -45,7 +45,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	temp = first->parent;
 	while (temp)
 	{
-	if (has_both(temp, first, second))
+	if (has_both(temp, first, second) == 2)
 		return (temp);
 	temp  = temp->parent;
 	}
