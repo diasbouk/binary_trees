@@ -67,11 +67,11 @@ void ultra_binary_level_order(const binary_tree_t *tree,
 
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (!tree || !func)
-		return;
 	int max_level;
 	int level;
 
+	if (!tree || !func)
+		return;
 	max_level = binary_tree_height(tree);
 	level = 0;
 	while (level <= max_level)
